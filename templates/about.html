@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+
+{% block banner-slider %}
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="heading-title">About</h1>
+              <p class="mb-0">
+                <span class="text-secondary fw-bold">CEK Alpha Consultants</span> is a firm of Chartered Accountants and Tax Practitioners duly registered 
+            with the Corporate Affairs Commission under the Part B of the provisions of the Companies and Allied Matters Act 2004.
+          
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+            <ol>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li class="current">About Us</li>
+            </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+{% endblock %}
+
+{% block main-content %}
+
+<!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>About Us</h2>
+        <p><span class="text-warning fw-bold">CEK Alpha Consultants</span> is a firm of Chartered Accountants and Tax Practitioners duly registered 
+            with the Corporate Affairs Commission under the Part B of the provisions of the Companies and Allied Matters Act 2004.
+            We deliver a wide range of services specifically designed to meet the individual needs of business enterprises, Ministries, Departments and Government Agencies in the areas of;
+        
+          </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 position-relative">
+            <div class="about-img" data-aos="fade-right">
+              <img src="{% static 'assets/img/acct.jpg' %}" class="img-fluid" alt="">
+            
+              <a href="#" class="play-btn" data-bs-toggle="modal" data-bs-target="#aboutVideoModal">
+                <i class="bi bi-play-fill"></i>
+              </a>
+            </div>
+            <div class="experience-badge" data-aos="fade-up">
+              <h2>20+</h2>
+              <p>Years Accounting and Auditing<br>Experience</p>
+            </div>
+            <div class="projects-badge" data-aos="fade-left">
+              <h2>150+</h2>
+              <p>Satisfied Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <h6 class="display-4 fw-bold mb-4">Our Corporate Profile</h6> 
+            <!-- <p class="lead mb-4">We deliver a wide range of services specifically designed to meet the individual needs of business enterprises, Ministries, Departments and Government Agencies in the areas of;</p> -->
+
+            <div class="features">
+              <!-- <div class="feature-item mb-4" data-aos="fade-up">
+                <div class="feature-icon">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+                <div class="feature-content">
+                    <h5>Accounting and Auditing Services.</h5>
+                    <p>We pro-actively deliver Services in such a manner that affords our clients enough room to concentrate on their core business deliverables, This is a one-stop shop for accounting, audit and assurance solutions, management, financial and banking solutions outfit that is poised to deliver RESULTS to its clients.</p>
+                </div>
+              </div>
+
+              <div class="feature-item mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                  <i class="bi bi-file-excel-fill"></i>
+                </div>
+                <div class="feature-content">
+                  <h5>Taxation, Tax Planning and Tax Management Consultancy</h5>
+                  <p>We attach much importance to prompt service delivery, integrity, confidentiality and professionalism. And all our services are thoroughly and specifically designed to assist our clients grow their business in this present day ever dynamic and turbulent operating environment.</p>
+                </div>
+              </div> -->
+
+              <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
+                <li><i class="bi bi-check-circle"></i> Accountancy Services </li>
+                <li><i class="bi bi-check-circle"></i> Auditing and Assurance Services</li>
+                <li><i class="bi bi-check-circle"></i> Taxation, Tax Planning and Tax Management Consultancy.</li>
+                <li><i class="bi bi-check-circle"></i> Withholding Tax Credit Notes Recovery from Customers and or from Federal Inland Revenue Service (FIRS) for use to defray tax liabilities</li>
+                <li><i class="bi bi-check-circle"></i> Accounting system design, implementation, automation, supervision and training of staff</li>
+                <li><i class="bi bi-check-circle"></i> Project or Loan Account Reconciliation and Bank Overcharge investigation Services.</li>
+                <li><i class="bi bi-check-circle"></i> Financial Management and Banking Advisory Services including interfacing with AMCON </li>
+                <li><i class="bi bi-check-circle"></i> IFRS adoption, conversion and implementation </li>
+                <li><i class="bi bi-check-circle"></i> Budgetary control design and Budget Performance Assessment and Evaluation </li>
+                <li><i class="bi bi-check-circle"></i> Capacity Building for effective over-sight functions and revenue mobilization consultancy </li>
+                <li><i class="bi bi-check-circle"></i> Forensic and Fraud Investigation and Litigation Support Services. </li>
+                <li><i class="bi bi-check-circle"></i> Company Secretarial Services & Company Incorporation.</li>
+              </ul>
+
+              <a href="#" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="300">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Professional Services</h2>
+        <p>We bring to our clients, pro-active and innovative solutions that create tangible values based firmly on professional and technical skills.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+            
+            <div class="col-lg-6">
+                <div class="services-content" data-aos="fade-left" data-aos-duration="900">
+                    <span class="subtitle">Our Strategies</span>
+                    <p>Our aim is to assist clients in the growth and development of their business and to enhance their wealth, both as corporate organizations and as individuals.</p>
+                    <p data-aos="fade-right" data-aos-duration="800"> Our foremost interest in every assignment is our client’s satisfaction. We define objectives, targets and goals and agree that with the client and thereafter assiduously see to it that they are achieved.</p>
+                    <p data-aos="fade-right" data-aos-duration="800"> Our services are rendered with high technical expertise, depth and quality anchored on high skill and experience acquired over the years in real live operations.</p>
+                    <div class="mt-4" data-aos="fade-right" data-aos-duration="1100">
+                        <a href="service-details.html" class="btn-consultation"><span>Request a Consultation</span><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-6">
+                <div class="services-content" data-aos="fade-left" data-aos-duration="900">
+                    <span class="subtitle">Approaches to Clients' Assignments</span>
+                    <p>Every assignment from our clients, irrespective of the size of the engagement, is the responsibility of the Partners.
+                      They are responsible and take ownership for co-ordination and delivery of the service to the client, regardless of the nature of that service, size or its location.
+                    </p>
+                    <p data-aos="fade-right" data-aos-duration="800"> Engagements are carried out in accordance with the firm's client service engagement which we will develop with the aim
+                       of delivering a high quality, cost efficient and value-added service to the client.  It will be based on the assessment of the nature of the engagement and a thorough 
+                       evaluation of the client's business characteristics and needs.
+                    </p>
+                    <p data-aos="fade-right" data-aos-duration="800"> As part of quality control, all drafts are usually reviewed by the Partners and discussed with the client before final 
+                      reports are issued. By this, we ensure that all jobs executed are quality controlled and comply with the standards of the firm and those issued by both the Nigerian and 
+                      International standards setting bodies that we belong to, as well as meet the need of the client.
+                    </p>
+                    <!-- <div class="mt-4" data-aos="fade-right" data-aos-duration="1100">
+                        <a href="service-details.html" class="btn-consultation"><span>Request a Consultation</span><i class="bi bi-arrow-right"></i></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col-12">
+            <h2><span class="subtitle text-secondary">Human Resources</span></h2>
+
+            <p data-aos="fade-right" data-aos-duration="800"> The Partners in the firm are seasoned professionals and members of the <span class="fw-bold">Institute of Chartered Accountants of Nigeria (ICAN), Chartered Institute of Taxation of Nigeria (CITN)</span> and other professional institutes of repute. 
+              <br>
+              All the other employees and trainees are graduates of reputable universities and polytechnics in Nigeria. All our members of staff are experienced in computer processes and as a medium sized company, we claim competencies comparable with reputable firms. 
+            </p>
+
+            <div class="services-slider swiper mt-5 init-swiper">
+              <div class="section-title">
+                <h2>Values and Beliefs</h2>
+                <p>We share certain values and beliefs in the firm which unite us and form the bedrock upon which our services are delivered. These values and beliefs are;:</p>
+              </div>
+              <script type="application/json" class="swiper-config">
+                {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20,
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "navigation": {
+                    "nextEl": ".swiper-nav-next",
+                    "prevEl": ".swiper-nav-prev"
+                  },
+                  "breakpoints": {
+                    "320": {
+                      "slidesPerView": 1
+                    },
+                    "768": {
+                      "slidesPerView": 2
+                    },
+                    "992": {
+                      "slidesPerView": 3
+                    }
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="service-card">
+                    <div class="icon-box">
+                      <i class="bi bi-bar-chart-fill"></i>
+                    </div>
+                    <a href="service-details.html" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
+                    <div class="content">
+                      <h4 class="text-center fw-bold">Integrity</h4>
+                      <p>We apply the highest standards of professional conduct to our activities with our clients knowing that
+                         it is in so doing that we create and promote goodwill and reputation for the firm.
+                      </p>
+                      <div class="service-number">01</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="service-card">
+                    <div class="icon-box">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <a href="service-details.html" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
+                    <div class="content">
+                      <h4 class="text-center fw-bold">Confidentiality</h4>
+                      <p>As professional we are quite aware of our obligation to our clients to ensure that such information are never
+                         divulged to third parties either while we are of service to them or when our services to them have ceased, 
+                         without proper and  specific approval from them.
+                      </p>
+                      <div class="service-number">02</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="service-card">
+                    <div class="icon-box">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <a href="service-details.html" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
+                    <div class="content">
+                      <h4 class="text-center fw-bold">Outstanding Value to Clients</h4>
+                      <p>We work with our clients as a team, offering innovative perspectives that add values to their business at all times. </p>
+                      <div class="service-number">03</div>
+                    </div>
+                  </div>
+                </div>
+
+            
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper-navigation">
+              <button class="swiper-nav-prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="swiper-nav-next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Professional Experience</h2>
+        <p>At <span class="text-warning fw-bold">CEK Alpha Consultants</span> We have an encompassing wealth of experience but not limited to the following areas;
+          </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 position-relative">
+            <div class="about-img" data-aos="fade-right">
+              <img src="{% static 'assets/img/acct.jpg' %}" class="img-fluid" alt="">
+            
+              <a href="#" class="play-btn" data-bs-toggle="modal" data-bs-target="#aboutVideoModal">
+                <i class="bi bi-play-fill"></i>
+              </a>
+            </div>
+            <div class="experience-badge" data-aos="fade-up">
+              <h2>20+</h2>
+              <p>Years Accounting and Auditing<br>Experience</p>
+            </div>
+            <!-- <div class="projects-badge" data-aos="fade-left">
+              <h2>150+</h2>
+              <p>Satisfied Clients</p>
+            </div> -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <h6 class="display-4 fw-bold mb-4">Sectorial Experience</h6> 
+            <!-- <p class="lead mb-4">We deliver a wide range of services specifically designed to meet the individual needs of business enterprises, Ministries, Departments and Government Agencies in the areas of;</p> -->
+
+            <div class="features">
+              <!-- <div class="feature-item mb-4" data-aos="fade-up">
+                <div class="feature-icon">
+                  <i class="bi bi-cash-stack"></i>
+                </div>
+                <div class="feature-content">
+                    <h5>Accounting and Auditing Services.</h5>
+                    <p>We pro-actively deliver Services in such a manner that affords our clients enough room to concentrate on their core business deliverables, This is a one-stop shop for accounting, audit and assurance solutions, management, financial and banking solutions outfit that is poised to deliver RESULTS to its clients.</p>
+                </div>
+              </div>
+
+              <div class="feature-item mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                  <i class="bi bi-file-excel-fill"></i>
+                </div>
+                <div class="feature-content">
+                  <h5>Taxation, Tax Planning and Tax Management Consultancy</h5>
+                  <p>We attach much importance to prompt service delivery, integrity, confidentiality and professionalism. And all our services are thoroughly and specifically designed to assist our clients grow their business in this present day ever dynamic and turbulent operating environment.</p>
+                </div>
+              </div> -->
+
+              <ul class="check-list" data-aos="fade-up" data-aos-delay="200">
+                <li><i class="bi bi-check-circle"></i> Agriculture and Agro-allied </li>
+                <li><i class="bi bi-check-circle"></i> Automobile</li>
+                <li><i class="bi bi-check-circle"></i> Banking, Insurance and Financial Services</li>
+                <li><i class="bi bi-check-circle"></i> Computers and Telecommunications</li>
+                <li><i class="bi bi-check-circle"></i> Construction</li>
+                <li><i class="bi bi-check-circle"></i> Educational Institutions</li>
+                <li><i class="bi bi-check-circle"></i> Engineering </li>
+                <li><i class="bi bi-check-circle"></i> Farming and Food Processing </li>
+                <li><i class="bi bi-check-circle"></i> Government Departments and Agencies </li>
+                <li><i class="bi bi-check-circle"></i> Haulage and Transportation </li>
+                <li><i class="bi bi-check-circle"></i> Hospital and Medical Practice </li>
+                <li><i class="bi bi-check-circle"></i> Manufacturing</li>
+                <li><i class="bi bi-check-circle"></i> Petroleum and Gas</li>
+                <li><i class="bi bi-check-circle"></i> Property and Development</li>
+                <li><i class="bi bi-check-circle"></i> Wholesale and Retail Distribution and Warehousing</li>
+              </ul>
+
+              <!-- <a href="#" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="300">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+
+{% endblock %}
