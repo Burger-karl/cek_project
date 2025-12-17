@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog Articles{% endblock title %}
+
+{% block banner-slider %}
+
+    <!-- Page Title -->
+    <div class="page-title page-title-bg">
+        <div class="heading heading-overlay">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-8 text-center text-lg-start">
+                        <h1 class="heading-title text-white">Blog</h1>
+                        <p class="mb-0 text-white">
+                            <span class="text-secondary text-white fw-bold">CEK Alpha Consultants</span>
+                            insights, accounting tips, tax advisory, and business updates.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 text-center text-lg-end mt-3 mt-lg-0">
+                        <a href="{% url 'blog:create' %}" class="btn btn-primary">
+                            <i class="bi bi-plus-circle text-white"></i> New Post
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="current">Blog</li>
+                </ol>
+            </div>
+        </nav>
+    </div>
+<!-- End Page Title -->
+
+{% endblock %}
+
+{% block main-content %}
+
+    <!-- Blog Posts Section -->
+    <section id="blog-posts" class="blog-posts section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+            <!-- ===== Blog Posts Column ===== -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+
+                {% for post in posts %}
+                <article class="featured-post mb-4">
+
+                    <div class="featured-img">
+                        {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}"
+                            class="img-fluid" loading="lazy">
+                        {% else %}
+                        <img src="{% static 'assets/img/blog/default.webp' %}"
+                            class="img-fluid" loading="lazy">
+                        {% endif %}
+                    </div>
+
+                    <div class="featured-content">
+                        <div class="post-header">
+
+                        {% if post.tags.first %}
+                            <a href="{% url 'blog:tag' post.tags.first.slug %}"
+                            class="category">
+                            {{ post.tags.first.name }}
+                            </a>
+                        {% endif %}
+
+                        <span class="post-date">
+                            {{ post.created_at|date:"M d, Y" }}
+                        </span>
+                        </div>
+
+                        <h2 class="post-title">
+                        <a href="{{ post.get_absolute_url }}">
+                            {{ post.title }}
+                        </a>
+                        </h2>
+
+                        <p class="post-excerpt">
+                        {{ post.content|truncatewords:30 }}
+                        </p>
+
+                        <div class="post-footer">
+                        <div class="author-info">
+                            <div class="author-details">
+                            <span class="author-name">
+                                {{ post.author.get_full_name|default:post.author.username }}
+                            </span>
+                            </div>
+                        </div>
+
+                        <a href="{{ post.get_absolute_url }}" class="read-more">
+                            Read More
+                        </a>
+                        </div>
+                    </div>
+
+                </article>
+                {% empty %}
+                <p>No blog posts available.</p>
+                {% endfor %}
+
+                <!-- ===== Pagination ===== -->
+                {% if is_paginated %}
+                <nav class="blog-pagination mt-4">
+                    <ul class="pagination justify-content-center">
+
+                        {% if page_obj.has_previous %}
+                        <li class="page-item">
+                        <a class="page-link"
+                            href="?page={{ page_obj.previous_page_number }}">
+                            Previous
+                        </a>
+                        </li>
+                        {% endif %}
+
+                        {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <li class="page-item active">
+                            <span class="page-link">{{ num }}</span>
+                            </li>
+                        {% elif num > page_obj.number|add:'-2' and num < page_obj.number|add:'2' %}
+                            <li class="page-item">
+                            <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                            </li>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if page_obj.has_next %}
+                        <li class="page-item">
+                        <a class="page-link"
+                            href="?page={{ page_obj.next_page_number }}">
+                            Next
+                        </a>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </nav>
+                {% endif %}
+
+            </div>
+
+            
+            <!-- ===== Tags Sidebar ===== -->
+            <div class="col-lg-4">
+
+                <div class="sidebar" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="sidebar-title">Tags</h3>
+
+                    <div class="sidebar-item tags">
+                        <ul class="tag-list">
+                        {% for tag in tags %}
+                            <li>
+                            <a href="{% url 'blog:tag' tag.slug %}">
+                                {{ tag.name }}
+                                <span>({{ tag.posts.count }})</span>
+                            </a>
+                            </li>
+                        {% empty %}
+                            <li>No tags available</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+      </div>
+
+    </section><!-- /Blog Posts Section -->
+
+
+{% endblock %}

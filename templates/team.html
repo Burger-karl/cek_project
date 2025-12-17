@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock title %}
+
+{% block banner-slider %}
+
+    <!-- Page Title -->
+    <div class="page-title page-title-bg">
+
+        <div class="heading heading-overlay">
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-lg-8">
+
+                        <h1 class="heading-title text-white">Our Team</h1>
+
+                        <p class="mb-0 text-white">
+                            <span class="fw-bold">CEK Alpha Consultants</span>
+                            is a firm with seasoned professionals and members of the <span class="fw-bold">Institute of
+                             Chartered Accountants of Nigeria (ICAN), Chartered Institute of Taxation of Nigeria (CITN)</span> and other professional institutes of repute.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="breadcrumbs">
+            <div class="container">
+            <ol>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="current">Our Team</li>
+            </ol>
+            </div>
+        </nav>
+
+    </div>
+<!-- End Page Title -->
+
+
+{% endblock %}
+
+{% block main-content %}
+
+    <!-- Team Section -->
+    <section id="team" class="team section light-background">
+
+      <!-- Section Title -->
+        <div class="container section-title">
+            <h2>Team</h2>
+            <p>Get to know our seasoned professionals with vast experience.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <!-- Team Member -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+
+                        <!-- Image -->
+                        <div class="team-image">
+                            <img src="{% static 'assets/img/charles.jpg' %}" alt="Team Member">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="team-content">
+
+                            <h4 class="team-name">Mr Charles U. Kalu</h4>
+                            <span class="team-role">Senior Chartered Accountant</span>
+
+                            <!-- Social Links -->
+                            <div class="team-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                            </div>
+
+                            <!-- Qualifications -->
+                            <div class="team-qualifications">
+                                <h6>Qualifications</h6>
+                                <ul>
+                                    <li>Partner & COO</li>
+                                    <li>ACA. ACTI. CFA</li>
+                                    <li>BSc. (Hons)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Bio -->
+                            <div class="team-bio">
+                                <p>
+                                    Mr Kalu is a seasoned Chartered Accountant with over 10 years of
+                                    professional experience in financial advisory, tax planning,
+                                    auditing, and corporate governance. She has worked with
+                                    multinational firms and SMEs across Nigeria, providing strategic
+                                    insights that drive growth and compliance.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat Team Member -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+
+                        <!-- Image -->
+                        <div class="team-image">
+                            <img src="{% static 'assets/img/emeka.jpg' %}" alt="Team Member">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="team-content">
+
+                            <h4 class="team-name">Mr Emeka Kalu Ukpai</h4>
+                            <span class="team-role">Senior Chartered Accountant</span>
+
+                            <!-- Social Links -->
+                            <div class="team-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                            </div>
+
+                            <!-- Qualifications -->
+                            <div class="team-qualifications">
+                                <h6>Qualifications</h6>
+                                <ul>
+                                    <li>Managing Partner</li>
+                                    <li>ACA. IIA. CISA</li>
+                                    <li>HND</li>
+                                </ul>
+                            </div>
+
+                            <!-- Bio -->
+                            <div class="team-bio">
+                                <p>
+                                    Mr Ukpai is a seasoned Chartered Accountant with over 10 years of
+                                    professional experience in financial advisory, tax planning,
+                                    auditing, and corporate governance. She has worked with
+                                    multinational firms and SMEs across Nigeria, providing strategic
+                                    insights that drive growth and compliance.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+
+                        <!-- Image -->
+                        <div class="team-image">
+                            <img src="{% static 'assets/img/fred.jpg' %}" alt="Team Member">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="team-content">
+
+                            <h4 class="team-name">Prince Frederick Onah Ododo</h4>
+                            <span class="team-role">Audit Manager</span>
+
+                            <!-- Social Links -->
+                            <div class="team-socials">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                            </div>
+
+                            <!-- Qualifications -->
+                            <div class="team-qualifications">
+                                <h6>Qualifications</h6>
+                                <ul>
+                                    <li>Audit Manager</li>
+                                    <li>ACIB</li>
+                                    <li>BSc. (Hons)</li>
+                                </ul>
+                            </div>
+
+                            <!-- Bio -->
+                            <div class="team-bio">
+                                <p>
+                                    Prince Frederick Ododo is a seasoned Professional Banker with over 10 years of
+                                    professional experience in financial advisory, tax planning,
+                                    auditing, and corporate governance. She has worked with
+                                    multinational firms and SMEs across Nigeria, providing strategic
+                                    insights that drive growth and compliance.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section><!-- /Team Section -->
+
+    <!-- ======= Legal Consultant Section ======= -->
+    <section id="legal-consultant" class="section bg-light">
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="section-title text-center mb-5">
+        <h2>Legal Consultant</h2>
+        <p class="text-muted">
+            Our legal advisory support strengthens corporate governance and compliance.
+        </p>
+        </div>
+
+        <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <div class="card shadow-lg border-0 lawyer-card">
+            <div class="card-body p-5">
+
+                <!-- Name & Title -->
+                <div class="text-center mb-4">
+                <h3 class="fw-bold mb-1">
+                    ISIAKA OLATUNJI ABDULHAMEED, ESQ.
+                </h3>
+                <p class="text-primary fw-semibold mb-2">
+                    DL, LL.B (Hons), BL, LLM, PhD (In View)
+                </p>
+                <span class="badge bg-secondary px-3 py-2">
+                    Legal Consultant
+                </span>
+                </div>
+
+                <!-- Intro -->
+                <p class="lead text-center">
+                Solicitor of the Supreme Court of Nigeria, Consultant and Notary Public.
+                </p>
+
+                <hr class="my-4">
+
+                <!-- Experience -->
+                <p>
+                Isiaka Olatunji Abdulhameed Esq. is a seasoned legal practitioner with over
+                <strong>twenty (20) years</strong> of experience spanning corporate,
+                commercial, property, loan recovery, and general civil litigation.
+                He has rendered professional services to individuals, banks, and both
+                local and international corporate organizations.
+                </p>
+
+                <!-- Areas of Practice -->
+                <h5 class="fw-bold mt-4 mb-3">Areas of Legal Practice & Expertise</h5>
+
+                <ul class="row list-unstyled g-3 lawyer-list">
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Provision of legal opinions and briefs on all aspects of law
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    General civil litigation and debt recovery
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Drafting and reviewing commercial & corporate contracts
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Mortgage, loan, employment & joint venture agreements
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Land agreements, property perfection & registration
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Corporate Affairs Commission (CAC) compliance & filings
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Due diligence at Lands Registry & CAC
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Legal advisory services to corporate & individual clients
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Acquisition of sites for telecommunication masts
+                </li>
+                <li class="col-md-6">
+                    <i class="bi bi-check-circle-fill text-primary"></i>
+                    Secretarial duties & regulatory liaison services
+                </li>
+                </ul>
+
+                <!-- Closing -->
+                <p class="mt-4">
+                He brings his wealth of professional experience to bear on all legal
+                engagements of the firm, ensuring compliance, risk mitigation, and
+                strategic legal guidance.
+                </p>
+
+            </div>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+    </section>
+    <!-- End Legal Consultant Section -->
+
+
+{% endblock %}

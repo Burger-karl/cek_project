@@ -1,16 +1,10 @@
-/**
-* Template Name: Strive
-* Template URL: https://bootstrapmade.com/strive-bootstrap-business-template/
-* Updated: Sep 20 2025 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 @charset "UTF-8";
 
 /*--------------------------------------------------------------
 # Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
+
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
@@ -3929,9 +3923,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 /*--------------------------------------------------------------
 # Blog Posts Section
@@ -4766,4 +4757,149 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+
+
+/* Page title background */
+.page-title-bg {
+  position: relative;
+  background-image: url("https://res.cloudinary.com/dykhctgak/image/upload/v1765960097/audit_jxxe8b.jpg"); /* change image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay with blur */
+.heading-overlay {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* Blur + dark overlay */
+.heading-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+/* Ensure text is above overlay */
+.heading-overlay .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text styling */
+.heading-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Team Image */
+.team-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Content */
+.team-content {
+  padding: 20px;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* Social Links */
+.team-socials {
+  margin: 10px 0;
+}
+
+.team-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 6px;
+  background: #f1f3f5;
+  border-radius: 50%;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.team-socials a:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Qualifications */
+.team-qualifications {
+  margin-top: 15px;
+}
+
+.team-qualifications h6 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.team-qualifications ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.team-qualifications ul li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+/* Bio */
+.team-bio p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+.lawyer-card {
+  border-radius: 16px;
+}
+
+.lawyer-list li {
+  font-size: 0.95rem;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
 }

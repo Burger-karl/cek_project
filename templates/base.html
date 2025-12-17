@@ -43,12 +43,10 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="{% url 'home' %}" class="active">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="{% url 'blog:list' %}">Blog</a></li>
+          <li><a href="{% url 'team' %}">Our Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -104,16 +102,16 @@
 
             <div class="newsletter-form">
               <h5>Stay Updated</h5>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <form action="" class="php-email-form">
                 <div class="input-group">
-                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
-                  <button type="submit" class="btn-subscribe">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" readonly>
+                  <button type="" class="btn-subscribe">
                     <i class="bi bi-send"></i>
                   </button>
                 </div>
-                <div class="loading">Loading</div>
+                <!-- <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Thank you for subscribing!</div>
+                <div class="sent-message">Thank you for subscribing!</div> -->
               </form>
             </div>
           </div>

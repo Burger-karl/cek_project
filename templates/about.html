@@ -5,30 +5,38 @@
 {% block banner-slider %}
 
     <!-- Page Title -->
-    <div class="page-title">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1 class="heading-title">About</h1>
-              <p class="mb-0">
-                <span class="text-secondary fw-bold">CEK Alpha Consultants</span> is a firm of Chartered Accountants and Tax Practitioners duly registered 
-            with the Corporate Affairs Commission under the Part B of the provisions of the Companies and Allied Matters Act 2004.
-          
-              </p>
+    <div class="page-title page-title-bg">
+
+        <div class="heading heading-overlay">
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-lg-8">
+
+                        <h1 class="heading-title text-white">About Us</h1>
+
+                        <p class="mb-0 text-white">
+                            <span class="fw-bold">CEK Alpha Consultants</span>
+                            is a firm of Chartered Accountants and Tax Practitioners duly registered
+                            with the Corporate Affairs Commission under the Part B of the provisions
+                            of the Companies and Allied Matters Act 2004.
+                        </p>
+
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
+
+        <nav class="breadcrumbs">
+            <div class="container">
             <ol>
-              <li><a href="{% url 'home' %}">Home</a></li>
-              <li class="current">About Us</li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="current">About</li>
             </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+            </div>
+        </nav>
+
+    </div>
+<!-- End Page Title -->
 
 
 {% endblock %}
@@ -109,7 +117,7 @@
                 <li><i class="bi bi-check-circle"></i> Company Secretarial Services & Company Incorporation.</li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="300">Learn More</a>
+              <!-- <a href="#" class="btn btn-primary btn-lg mt-4" data-aos="fade-up" data-aos-delay="300">Learn More</a> -->
             </div>
           </div>
         </div>
@@ -138,7 +146,7 @@
                     <p data-aos="fade-right" data-aos-duration="800"> Our foremost interest in every assignment is our client’s satisfaction. We define objectives, targets and goals and agree that with the client and thereafter assiduously see to it that they are achieved.</p>
                     <p data-aos="fade-right" data-aos-duration="800"> Our services are rendered with high technical expertise, depth and quality anchored on high skill and experience acquired over the years in real live operations.</p>
                     <div class="mt-4" data-aos="fade-right" data-aos-duration="1100">
-                        <a href="service-details.html" class="btn-consultation"><span>Request a Consultation</span><i class="bi bi-arrow-right"></i></a>
+                        <!-- <a href="service-details.html" class="btn-consultation"><span>Request a Consultation</span><i class="bi bi-arrow-right"></i></a> -->
                     </div>
                 </div>
             </div>
@@ -288,7 +296,7 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6 position-relative">
             <div class="about-img" data-aos="fade-right">
-              <img src="{% static 'assets/img/acct.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'assets/img/about/about-portrait-2.webp' %}" class="img-fluid" alt="">
             
               <a href="#" class="play-btn" data-bs-toggle="modal" data-bs-target="#aboutVideoModal">
                 <i class="bi bi-play-fill"></i>
