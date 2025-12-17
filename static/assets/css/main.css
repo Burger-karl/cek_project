@@ -376,6 +376,19 @@ h6 {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+    flex-shrink: 0;
+  }
+
+
+  #header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    max-width: 70%;
   }
 
   .navmenu {
@@ -492,6 +505,31 @@ h6 {
     display: block;
   }
 }
+
+/* Fix logo size on small mobile screens */
+@media (max-width: 576px) {
+  .logo img {
+    max-height: 36px;
+    width: auto;
+  }
+
+  #header {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo img {
+    max-height: 30px;
+  }
+
+  .mobile-nav-toggle {
+    font-size: 24px;
+  }
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Global Footer

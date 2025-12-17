@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}HomePage{% endblock title %}
+{% block title %}CEK Alpha Consultants Home{% endblock title %}
     
    
 {% block banner-slider %}
@@ -358,8 +358,8 @@
             </div>
 
             <div class="cta-buttons">
-              <a href="#" class="btn btn-primary">Contact US</a>
-              <a href="#" class="btn btn-outline">Blog</a>
+              <a href="#contact" class="btn btn-primary">Contact US</a>
+              <a href="{% url 'blog:list' %}" class="btn btn-outline">Blog</a>
             </div>
 
             <div class="trust-indicators mt-4">
@@ -421,16 +421,44 @@
               }
             }
           </script>
+          <!-- <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/cek.jpg' %}" class="img-fluid" alt=""></div>
+          </div> -->
+
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-1.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-2.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-3.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-4.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-5.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-6.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-7.webp' %}" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{% static 'assets/img/clients/clients-8.webp' %}" class="img-fluid" alt=""></div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">CEK Alpha Consultants</span>
+            </div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">Accountancy Services</span>
+            </div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">Auditing</span>
+            </div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">Forensic Accounting</span>
+            </div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">Budgetary Control</span>
+            </div>
+
+            <div class="swiper-slide">
+              <span class="client-text text-secondary fw-bold">Taxation</span>
+            </div>
           </div>
+
         </div>
 
       </div>

@@ -1,8 +1,9 @@
-# blog/views.py
+
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import BlogPost, Tag
+from .forms import PostForm
 
 class BlogListView(ListView):
     model = BlogPost
@@ -25,7 +26,6 @@ class BlogListView(ListView):
         return context
 
 
-
 class BlogDetailView(DetailView):
     model = BlogPost
     template_name = 'blog/blog_detail.html'
@@ -39,7 +39,7 @@ class AdminRequiredMixin(UserPassesTestMixin):
 
 class BlogCreateView(LoginRequiredMixin, AdminRequiredMixin, CreateView):
     model = BlogPost
-    fields = ['title', 'content', 'image', 'tags', 'published']
+    form_class = PostForm
     template_name = 'blog/blog_form.html'
 
     def form_valid(self, form):
