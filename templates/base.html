@@ -10,8 +10,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="{% static 'assets/img/cek.jpg' %}" rel="icon">
-  <link href="{% static 'assets/img/cek.jpg' %}" rel="apple-touch-icon">
+  <link rel="icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{% static 'assets/img/favicon.ico' %}" type="image/x-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -37,8 +37,8 @@
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="{% static 'assets/img/cek.jpg' %}" alt="">
-        <!-- <h1 class="sitename">Strive</h1><span>.</span> -->
+        <img src="{% static 'assets/img/cek.jpg' %}" class="logo-desktop">
+        <img src="{% static 'assets/img/cek-logo-mobile.png' %}" class="logo-mobile">
       </a>
 
       <nav id="navmenu" class="navmenu">
