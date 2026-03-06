@@ -4975,3 +4975,23 @@ section,
   gap: 8px;
   align-items: flex-start;
 }
+
+
+
+.see-more-btn {
+        background: none;
+        border: none;
+        color: #e07c2b;          /* change to match your site accent colour */
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 6px 0 0;
+        text-decoration: underline;
+        display: inline-block;
+    }
+    .see-more-btn:hover {
+        opacity: 0.75;
+    }
+    .bio-extra {
+        transition: opacity 0.3s ease;
+    }

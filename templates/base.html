@@ -28,7 +28,16 @@
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
-  
+  <script>
+    function toggleBio(spanId, btn) {
+        const extra = document.getElementById(spanId);
+        if (!extra) return;
+
+        const isHidden = extra.style.display === 'none' || extra.style.display === '';
+        extra.style.display = isHidden ? 'inline' : 'none';
+        btn.textContent     = isHidden ? 'See Less'  : 'See More';
+    }
+  </script>
 </head>
 
 <body class="index-page">
@@ -216,8 +225,7 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+  
 
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
