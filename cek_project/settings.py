@@ -33,7 +33,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'cek-qoqf.onrender.com', 'cek-gx7h.onrender.com']
+ALLOWED_HOSTS = ['localhost, 'cek-gx7h.onrender.com', 'www.cekalphaconsultants.com', 'cekalphaconsultants.com']
 
 
 # Application definition
