@@ -1,6 +1,6 @@
 
 from django.shortcuts import get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import BlogPost, Tag
 from .forms import PostForm
@@ -45,3 +45,11 @@ class BlogCreateView(LoginRequiredMixin, AdminRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+class BlogUpdateView(LoginRequiredMixin, AdminRequiredMixin, UpdateView):
+    model = BlogPost
+    form_class = PostForm
+    template_name = 'blog/blog_form.html'
+    slug_url_kwarg = 'slug'
+    slug_field = 'slug'
